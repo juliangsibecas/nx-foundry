@@ -17,7 +17,7 @@
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/nx-foundry",
+        "outputPath": "dist/{projectRoot}",
         "main": "./src/index.ts",
         "tsConfig": "./tsconfig.lib.json",
         "assets": [
@@ -64,7 +64,8 @@
         "lintFilePatterns": [
           "./src",
           "{projectRoot}/package.json",
-          "./package.json"
+          "./package.json",
+          "generators.json"
         ]
       }
     },

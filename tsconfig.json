@@ -9,12 +9,17 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "commonjs",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "nx-foundry": ["src/index.ts"]
+      "nx-foundry": [
+        "src/index.ts"
+      ]
     }
   },
   "files": [],

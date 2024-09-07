@@ -1,10 +1,11 @@
 {
   "name": "nx-foundry",
-  "version": "0.0.1",
+  "version": "0.0.0-e2e",
   "license": "MIT",
   "scripts": {},
   "dependencies": {
     "@nx/devkit": "19.6.5",
+    "ignore": "^5.3.2",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
@@ -12,6 +13,7 @@
     "@nx/eslint-plugin": "19.6.5",
     "@nx/jest": "19.6.5",
     "@nx/js": "19.6.5",
+    "@nx/plugin": "19.6.5",
     "@nx/workspace": "19.6.5",
     "@swc-node/register": "~1.9.1",
     "@swc/cli": "~0.3.12",
@@ -30,10 +32,10 @@
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "typescript": "~5.5.2",
-    "verdaccio": "^5.0.4",
-    "@nx/plugin": "19.6.5"
+    "verdaccio": "^5.0.4"
   },
   "type": "commonjs",
   "main": "./src/index.js",
-  "typings": "./src/index.d.ts"
+  "typings": "./src/index.d.ts",
+  "generators": "./generators.json"
 }
