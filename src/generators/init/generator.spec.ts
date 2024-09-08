@@ -1,50 +1,38 @@
-import {
-  addDependenciesToPackageJson,
-  readJson,
-  Tree,
-  updateJson,
-} from '@nx/devkit';
 import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree, readNxJson } from '@nx/devkit';
 
-import { nxVersion } from '../../utils/versions';
 import { initGenerator } from './generator';
 
-describe('init', () => {
+describe('init generator', () => {
   let tree: Tree;
 
   beforeEach(() => {
     tree = createTreeWithEmptyWorkspace();
+    tree.write('.gitignore', '');
   });
 
-  it('should add dependencies', async () => {
-    const existing = 'existing';
-    const existingVersion = '1.0.0';
-
-    addDependenciesToPackageJson(
-      tree,
-      {
-        'nx-foundry': nxVersion,
-        [existing]: existingVersion,
-      },
-      {
-        [existing]: existingVersion,
-      },
-    );
+  it('should add plugin to nx.json', async () => {
     await initGenerator(tree);
+    const nxJson = readNxJson(tree);
 
-    const packageJson = readJson(tree, 'package.json');
-    expect(packageJson.dependencies['nx-foundry']).toBeUndefined();
-    expect(packageJson.dependencies[existing]).toBeDefined();
-    expect(packageJson.devDependencies['nx-foundry']).toBeDefined();
-    expect(packageJson.devDependencies[existing]).toBeDefined();
+    expect(nxJson.plugins).toMatchObject([
+      {
+        plugin: 'nx-foundry',
+        options: {
+          buildTargetName: 'build',
+          testTargetName: 'test',
+          formatTargetName: 'format',
+          snapshotTargetName: 'snapshot',
+          deployTargetName: 'deploy',
+        },
+      },
+    ]);
   });
 
-  it('should not fail when dependencies is missing from package.json and no other init generators are invoked', async () => {
-    updateJson(tree, 'package.json', (json) => {
-      delete json.dependencies;
-      return json;
-    });
+  it('should add .gitignore entry', async () => {
+    await initGenerator(tree);
+    const gitIgnore = tree.read('.gitignore', 'utf-8');
 
-    await expect(initGenerator(tree)).resolves.toBeTruthy();
+    expect(gitIgnore.includes('# Foundry')).toBe(true);
   });
 });

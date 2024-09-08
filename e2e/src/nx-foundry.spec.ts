@@ -81,24 +81,10 @@ describe('nx-foundry', () => {
             cwd: PROJECT_NAME,
           },
         },
-        anvil: {
-          executor: 'nx:run-commands',
-          options: {
-            command: 'anvil',
-            cwd: PROJECT_NAME,
-          },
-        },
         deploy: {
           executor: 'nx:run-commands',
           options: {
             command: 'forge script',
-            cwd: PROJECT_NAME,
-          },
-        },
-        cast: {
-          executor: 'nx:run-commands',
-          options: {
-            command: 'cast',
             cwd: PROJECT_NAME,
           },
         },

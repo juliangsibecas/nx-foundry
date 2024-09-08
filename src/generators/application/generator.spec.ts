@@ -17,7 +17,7 @@ describe('application generator', () => {
   });
 
   it('should run successfully (derived)', async () => {
-    let derivedOptions: ApplicationGeneratorSchema = {
+    const derivedOptions: ApplicationGeneratorSchema = {
       ...options,
       projectNameAndRootFormat: 'derived',
     };
@@ -27,7 +27,7 @@ describe('application generator', () => {
   });
 
   it('should run successfully (provided)', async () => {
-    let providedOptions: ApplicationGeneratorSchema = {
+    const providedOptions: ApplicationGeneratorSchema = {
       ...options,
       projectNameAndRootFormat: 'as-provided',
       directory: `apps/${PROJECT_NAME}`,

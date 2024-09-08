@@ -12,9 +12,7 @@ export interface FoundryPluginOptions {
   testTargetName?: string;
   formatTargetName?: string;
   snapshotTargetName?: string;
-  anvilTargetName?: string;
   deployTargetName?: string;
-  castTargetName?: string;
 }
 
 const foundryConfigGlob = '**/foundry.toml';
@@ -75,22 +73,8 @@ async function createNodesInternal(
     },
   };
 
-  const anvilTarget: TargetConfiguration = {
-    command: `anvil`,
-    options: {
-      cwd: projectRoot,
-    },
-  };
-
   const deployTarget: TargetConfiguration = {
     command: `forge script`,
-    options: {
-      cwd: projectRoot,
-    },
-  };
-
-  const castTarget: TargetConfiguration = {
-    command: `cast`,
     options: {
       cwd: projectRoot,
     },
@@ -104,9 +88,7 @@ async function createNodesInternal(
           [options.testTargetName]: testTarget,
           [options.formatTargetName]: formatTarget,
           [options.snapshotTargetName]: snapshotTarget,
-          [options.anvilTargetName]: anvilTarget,
           [options.deployTargetName]: deployTarget,
-          [options.castTargetName]: castTarget,
         },
       },
     },

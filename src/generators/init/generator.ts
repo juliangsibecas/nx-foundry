@@ -12,6 +12,7 @@ export async function initGenerator(tree: Tree) {
     if (!nxJson.plugins) {
       nxJson.plugins = [];
     }
+
     nxJson.plugins = [
       ...nxJson.plugins,
       {
@@ -21,9 +22,7 @@ export async function initGenerator(tree: Tree) {
           testTargetName: 'test',
           formatTargetName: 'format',
           snapshotTargetName: 'snapshot',
-          anvilTargetName: 'anvil',
           deployTargetName: 'deploy',
-          castTargetName: 'cast',
         },
       },
     ];
