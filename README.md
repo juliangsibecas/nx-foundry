@@ -1,76 +1,55 @@
-# NxFoundry
+<p align="center"><img src="https://github.com/foundry-rs/foundry/blob/master/.github/logo.png" width="240"></p>
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+<div align="center">
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+# Nx Foundry
 
-Run `npx nx graph` to visually explore what got created. Now, let's get you up to speed!
+Foundry generators and inferred tasks for Nx.
 
-## Finish your CI setup
+[![License](https://img.shields.io/github/license/juliangsibecas/nx-foundry.svg?color=40bb12)](https://github.com/juliangsibecas/nx-foundry/blob/master/LICENSE)
+[![NPM Version]([https://img.shields.io/npm/v/nx-foundry.svg](https://img.shields.io/npm/v/nx-foundry.svg))](https://www.npmjs.com/package/nx-foundry)
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/Vd4UpTqFAE)
 
+<br></br>
+</div>
 
-## Run tasks
+## Installation
 
-To run tasks with Nx use:
-
-```sh
-npx nx <target> <project-name>
+```bash
+pnpm add -D nx-foundry
 ```
+<br></br>
+## Generator
 
-For example:
-
-```sh
-npx nx build myproject
+```bash
+nx g nx-foundry:application <foundry-app-name>
 ```
+<br></br>
+## Tasks
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+### Building
+`nx build <foundry-app-name>`
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### Testing
+`nx test <foundry-app-name>`
 
-## Add new projects
+### Format
+`nx format <foundry-app-name>`
 
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
+### Gas Snapshots
+`nx snapshot <foundry-app-name>`
 
-To install a new plugin you can use the `nx add` command. Here's an example of adding the React plugin:
-```sh
-npx nx add @nx/react
-```
+### Deploy
+`nx deploy <foundry-app-name>`
 
-Use the plugin's generator to create new projects. For example, to create a new React app or library:
+<br></br>
+## Support
 
-```sh
-# Genenerate an app
-npx nx g @nx/react:app demo
+If you're having any problem, please [raise an issue](https://github.com/juliangsibecas/nx-foundry/issues/new) on GitHub and we'll be happy to help.
+<br></br>
+## Contribute
 
-# Generate a library
-npx nx g @nx/react:lib some-lib
-```
+- Follow [this instructions](https://github.com/juliangsibecas/nx-foundry/blob/master/CONTRIBUTING.md) in order to learn how to contribute to this project.
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
-
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+</br><hr>
+**Author:** Julian Gomez Sibecas
