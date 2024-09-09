@@ -7,7 +7,7 @@
 Foundry generators and inferred tasks for Nx.
 
 [![License](https://img.shields.io/github/license/juliangsibecas/nx-foundry.svg?color=40bb12)](https://github.com/juliangsibecas/nx-foundry/blob/master/LICENSE)
-[![NPM Version]([https://img.shields.io/npm/v/nx-foundry.svg](https://img.shields.io/npm/v/nx-foundry.svg))](https://www.npmjs.com/package/nx-foundry)
+[![NPM Version](https://img.shields.io/npm/v/nx-foundry.svg)](https://www.npmjs.com/package/nx-foundry)
 
 
 <br></br>

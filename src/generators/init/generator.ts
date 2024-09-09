@@ -1,5 +1,5 @@
 import { formatFiles, readNxJson, Tree, updateNxJson } from '@nx/devkit';
-import { addGitIgnoreEntry } from '../../utils';
+import { addGithubActionCI, addGitIgnoreEntry } from '../../utils';
 
 export async function initGenerator(tree: Tree) {
   const nxJson = readNxJson(tree) || {};
@@ -31,6 +31,7 @@ export async function initGenerator(tree: Tree) {
   updateNxJson(tree, nxJson);
 
   addGitIgnoreEntry(tree);
+  addGithubActionCI(tree);
 
   await formatFiles(tree);
 }
