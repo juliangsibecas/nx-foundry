@@ -2,6 +2,10 @@
   "name": "nx-foundry",
   "version": "0.1.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juliangsibecas/nx-foundry"
+  },
   "scripts": {},
   "dependencies": {
     "@nx/devkit": "19.6.5",
