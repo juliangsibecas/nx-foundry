@@ -1,3 +1,24 @@
+## 0.1.0 (2024-09-12)
+
+
+### 🚀 Features
+
+- add init generator ([252b87a](https://github.com/juliangsibecas/nx-foundry/commit/252b87a))
+- add application generator ([6ad022f](https://github.com/juliangsibecas/nx-foundry/commit/6ad022f))
+- add inferred tasks ([6e4a2d9](https://github.com/juliangsibecas/nx-foundry/commit/6e4a2d9))
+- add contributing ([ae8bab9](https://github.com/juliangsibecas/nx-foundry/commit/ae8bab9))
+- update README.md ([571dec9](https://github.com/juliangsibecas/nx-foundry/commit/571dec9))
+
+### 🩹 Fixes
+
+- remove unused tasks and fix lint ([82d26a7](https://github.com/juliangsibecas/nx-foundry/commit/82d26a7))
+- remove init generator required property ([865853c](https://github.com/juliangsibecas/nx-foundry/commit/865853c))
+- fix tests and lint ([95ad8a5](https://github.com/juliangsibecas/nx-foundry/commit/95ad8a5))
+
+### ❤️  Thank You
+
+- Julián Gómez Sibecas @juliangsibecas
+
 ## 0.0.8 (2024-09-08)
 
 
