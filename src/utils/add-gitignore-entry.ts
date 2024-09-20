@@ -9,7 +9,12 @@ export function addGitIgnoreEntry(host: Tree) {
   let content = host.read('.gitignore', 'utf-8').trimEnd();
 
   const ig = ignore();
-  ig.add(host.read('.gitignore', 'utf-8'));
+
+  if (content.includes("# Foundry")) {
+    return
+  }
+
+  ig.add(content);
 
   content = `${content}\n\n# Foundry
 cache/
