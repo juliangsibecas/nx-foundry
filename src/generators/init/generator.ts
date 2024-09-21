@@ -13,7 +13,7 @@ import {
 } from '../../utils';
 import { InitGeneratorSchema } from './schema';
 
-const updateDependencies = (tree: Tree, schema: InitGeneratorSchema) => {
+const updateDependencies = (tree: Tree, options: InitGeneratorSchema) => {
   removeDependenciesFromPackageJson(tree, ['nx-foundry'], []);
 
   return addDependenciesToPackageJson(
@@ -23,7 +23,7 @@ const updateDependencies = (tree: Tree, schema: InitGeneratorSchema) => {
       'nx-foundry': nxFoundryVersion,
     },
     undefined,
-    schema.keepExistingVersions
+    options.keepExistingVersions
   );
 };
 
@@ -57,18 +57,18 @@ const setupTargets = (tree: Tree) => {
   updateNxJson(tree, nxJson);
 };
 
-export async function initGenerator(tree: Tree, schema: InitGeneratorSchema) {
+export async function initGenerator(tree: Tree, options: InitGeneratorSchema) {
   setupTargets(tree);
 
   addGitIgnoreEntry(tree);
   addGithubActionCI(tree);
 
-  if (!schema.skipFormat) {
+  if (!options.skipFormat) {
     await formatFiles(tree);
   }
 
-  return !schema.skipPackageJson
-    ? updateDependencies(tree, schema)
+  return !options.skipPackageJson
+    ? updateDependencies(tree, options)
     : () => null;
 }
 
