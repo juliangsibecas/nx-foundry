@@ -16,7 +16,7 @@ Foundry generators and inferred tasks for Nx.
 ## Installation
 
 ```bash
-pnpm add -D nx-foundry
+nx add nx-foundry
 ```
 <br></br>
 ## Generator
