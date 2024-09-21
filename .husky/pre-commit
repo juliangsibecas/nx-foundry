@@ -1,2 +1,1 @@
-nx lint
-nx test
+nx run-many -t lint build test
