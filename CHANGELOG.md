@@ -1,3 +1,14 @@
+## 0.1.2 (2024-09-21)
+
+
+### 🚀 Features
+
+- add pre commit build ([42cf445](https://github.com/juliangsibecas/nx-foundry/commit/42cf445))
+
+### ❤️  Thank You
+
+- Julián Gómez Sibecas @juliangsibecas
+
 ## 0.1.1 (2024-09-21)
 
 
