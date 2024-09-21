@@ -4,4 +4,7 @@ export interface ApplicationGeneratorSchema {
   name: string;
   projectNameAndRootFormat?: ProjectNameAndRootFormat;
   directory?: string;
+  skipPackageJson?: boolean;
+  skipFormat?: boolean;
+  keepExistingVersions?: boolean;
 }

@@ -12,16 +12,16 @@ import { initGenerator } from '../init/generator';
 
 export async function applicationGenerator(
   tree: Tree,
-  options: ApplicationGeneratorSchema,
+  schema: ApplicationGeneratorSchema
 ) {
-  await initGenerator(tree);
+  await initGenerator(tree, schema);
 
-  let projectName = options.name;
-  let projectRoot = options.directory;
+  let projectName = schema.name;
+  let projectRoot = schema.directory;
 
   const nameAndRoot = await determineProjectNameAndRootOptions(tree, {
-    ...options,
-    projectNameAndRootFormat: options.projectNameAndRootFormat,
+    ...schema,
+    projectNameAndRootFormat: schema.projectNameAndRootFormat,
     projectType: 'application',
     callingGenerator: 'nx-foundry:application',
   });
@@ -37,7 +37,7 @@ export async function applicationGenerator(
   });
 
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, {
-    ...options,
+    ...schema,
     root: projectRoot,
   });
 

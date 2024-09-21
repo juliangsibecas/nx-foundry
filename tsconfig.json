@@ -20,7 +20,8 @@
       "nx-foundry": [
         "src/index.ts"
       ]
-    }
+    },
+    "resolveJsonModule": true
   },
   "files": [],
   "include": [],

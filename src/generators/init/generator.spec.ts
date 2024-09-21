@@ -36,12 +36,12 @@ jobs:
         with:
           version: 8
 
-`,
+`
     );
   });
 
   it('should add plugin to nx.json', async () => {
-    await initGenerator(tree);
+    await initGenerator(tree, {});
     const nxJson = readNxJson(tree);
 
     expect(nxJson.plugins).toMatchObject([
@@ -59,16 +59,16 @@ jobs:
   });
 
   it('should add .gitignore entry', async () => {
-    await initGenerator(tree);
+    await initGenerator(tree, {});
     const gitIgnore = tree.read('.gitignore', 'utf-8');
 
     expect(gitIgnore.includes('# Foundry')).toBe(true);
   });
 
   it('should add github actions step', async () => {
-    await initGenerator(tree);
+    await initGenerator(tree, {});
     expect(tree.read('.github/workflows/ci.yml', 'utf8')).toContain(
-      'Install Foundry',
+      'Install Foundry'
     );
   });
 });
