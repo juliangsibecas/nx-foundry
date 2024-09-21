@@ -6,7 +6,9 @@
     "type": "git",
     "url": "https://github.com/juliangsibecas/nx-foundry"
   },
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky"
+  },
   "dependencies": {
     "@nx/devkit": "19.6.5",
     "@nx/jest": "19.6.5",
@@ -32,6 +34,7 @@
     "@typescript-eslint/parser": "^7.16.0",
     "eslint": "~8.57.0",
     "eslint-config-prettier": "^9.0.0",
+    "husky": "^9.1.6",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "prettier": "^2.6.2",

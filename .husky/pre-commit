@@ -1,0 +1,2 @@
+nx lint
+nx test
