@@ -1,3 +1,21 @@
+## 0.1.1 (2024-09-21)
+
+
+### 🚀 Features
+
+- add github repository ([4df492b](https://github.com/juliangsibecas/nx-foundry/commit/4df492b))
+- add generators internal options ([a5bda86](https://github.com/juliangsibecas/nx-foundry/commit/a5bda86))
+- add husky ([2e22fb5](https://github.com/juliangsibecas/nx-foundry/commit/2e22fb5))
+
+### 🩹 Fixes
+
+- avoid adding gitignore entry twice ([52a2573](https://github.com/juliangsibecas/nx-foundry/commit/52a2573))
+- var naming ([6d7d7ee](https://github.com/juliangsibecas/nx-foundry/commit/6d7d7ee))
+
+### ❤️  Thank You
+
+- Julián Gómez Sibecas @juliangsibecas
+
 ## 0.1.0 (2024-09-12)
 
 
